@@ -372,7 +372,7 @@ public class DataGapRouteReader implements IDataToRouteReader {
         }
         context.incrementDataReadCount(dataCount);
         context.incrementPeekAheadFillCount(1);
-        return moreData;
+        return moreData && reading;
     }
 
     protected void copyToQueue(Data data) {
